@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
+    <link rel="stylesheet" href="./style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <main>
+        <button type="button">New book</button>
+        <dialog open>
+            <form action="" method="post">
+                <label for="">Title</label>
+                <input type="text" name="title">
+                <label for="">Author</label>
+                <input type="text" name="author">
+                <label for="">Number of pages</label>
+                <input type="number" name="pages_number">
+                <fieldset>
+                    <legend>Is read?</legend>
+                    <input type="radio" id="isRead" name="is_read">
+                    <label for="isRead">Yes</label>
+                    <input type="radio" id="isNotRead" name="is_read"">
+                    <label for="isNotRead">No</label>
+                </fieldset>
+            </form>
+        </dialog>
+        <section>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </section>
+    </main>
 </body>
 </html>
