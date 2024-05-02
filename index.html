@@ -10,21 +10,22 @@
 <body>
     <main>
         <button type="button" id="newBookBtn">New book</button>
-        <dialog open>
+        <dialog>
             <form action="" method="post">
-                <label for="">Title</label>
-                <input type="text" name="title">
-                <label for="">Author</label>
-                <input type="text" name="author">
-                <label for="">Number of pages</label>
-                <input type="number" name="pages_number">
+                <label for="title">Title</label>
+                <input id="title" type="text" name="title" required>
+                <label for="author">Author</label>
+                <input id="author" type="text" name="author" required>
+                <label for="pages_number">Number of pages</label>
+                <input id="pages_number" type="number" name="pages_number" required>
                 <fieldset>
                     <legend>Is read?</legend>
-                    <input type="radio" id="isRead" name="is_read">
+                    <input type="radio" id="isRead" name="is_read" value="true" required>
                     <label for="isRead">Yes</label>
-                    <input type="radio" id="isNotRead" name="is_read"">
+                    <input type="radio" id="isNotRead" name="is_read" value="false">
                     <label for="isNotRead">No</label>
                 </fieldset>
+                <button type="submit" id="addBookBtn">Add Book</button>
                 <button type="button" id="closeNewBookBtn">Close Dialog</button>
             </form>
         </dialog>
