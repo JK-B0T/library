@@ -99,12 +99,31 @@ section {
     gap: 16px;
     align-items: center;
     justify-items: center;
-    
+    padding: 8px;
 }
 
-section > div {
-    /*height: 100%;
-    width: 100%;*/
-    border: 2px solid blue;
-    background-color: red;
+section > article {
+    height: 100%;
+    width: 100%;
+    border: 2px solid rgb(215, 215, 215);
+    border-radius: 8px;
+    background-color: rgb(244, 253, 252);
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+article > figure {
+    grid-column: 1 / 3;
+}
+
+figure > img {
+    display: inline-block;
+    background-color: rgb(224, 224, 224);
+    margin: 10px 0;
+    width: 140px;
+    height: 200px;
+    border-radius: 8px;
 }
