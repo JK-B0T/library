@@ -1,16 +1,11 @@
 window.addEventListener("DOMContentLoaded", main, false);
 
 function main () {
-
-    const book1 = new Book("pop", "popo", 10, "true");
-    const book2 = new Book("pip", "pipi", 32, "false");
-    const book3 = new Book("pep", "pepe", 40, "true");
-    const book4 = new Book("pap", "papa", 52, "false");
     const myLibrary = [];
-    myLibrary.push(book1);
-    myLibrary.push(book2);
-    myLibrary.push(book3);
-    myLibrary.push(book4);
+    myLibrary.push(new Book("pop", "popo", 10, "true"));
+    myLibrary.push(new Book("pip", "pipi", 32, "false"));
+    myLibrary.push(new Book("pep", "pepe", 40, "true"));
+    myLibrary.push(new Book("pap", "papa", 52, "false"));
 
     const dialog = document.querySelector("dialog");
     const newBookBtn = document.getElementById("newBookBtn");
@@ -23,6 +18,7 @@ function main () {
         this.autor = autor;
         this.pages = pages;
         this.isread = isread;
+        this.id = myLibrary.length;
     }
 
     newBookBtn.addEventListener("click", () => {
@@ -55,5 +51,16 @@ function main () {
         for (let i = 0; i < myLibrary.length; i++) {
             console.log(myLibrary[i]);
         }
+
+        /*
+            <article>
+                <figure>
+                    <img src="" alt="title">
+                    <figcaption>title by author</figcaption>
+                </figure>
+                <span>Read: ✔️</span>
+                <span>Pages: 221</span>
+            </article>
+        */
     }
 }
