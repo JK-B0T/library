@@ -20,6 +20,7 @@ function main () {
         this.author = author;
         this.pages = pages;
         this.isRead = isRead;
+        this.isRemoved = false;
         this.id = myLibrary.length;
     }
 
@@ -52,9 +53,7 @@ function main () {
 
     function showLibrary () {
         for (let i = 0; i < myLibrary.length; i++) {
-            if (!document.getElementById(`bookBtn${myLibrary[i].id}`)) {
-                console.log(myLibrary[i]);
-
+            if (!document.getElementById(`bookBtn${myLibrary[i].id}`) && !myLibrary[i].isRemoved) {
                 const article = document.createElement("article");
                 const figure = document.createElement("figure");
                 const img = document.createElement("img");
@@ -90,6 +89,7 @@ function main () {
                 img.setAttribute("id", `bookBtn${myLibrary[i].id}`);
                 button.addEventListener("click", () => {
                     section.removeChild(article);
+                    myLibrary[i].isRemoved = true;
                 }, false)
                 article.appendChild(button);
     
@@ -108,4 +108,5 @@ function main () {
             </article>
         */
     }
+    showLibrary();
 }
